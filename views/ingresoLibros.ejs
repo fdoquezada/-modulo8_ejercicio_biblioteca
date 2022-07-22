@@ -1,0 +1,39 @@
+<% - include ("./partials/cabecera")%>
+<% - include ("./partials/navbar")%>
+<br><br> 
+ 
+
+
+<form action="/agregarLibro" method="post" enctype="multipart/form-data">
+    <select name="autor" id="autor">
+        <% for(  i = 0; i < autores.length; i++ ) { %>
+            <option value="<%=autores[i].Id%>"><%=autores[i].Nombre%></option>            
+        <% } %>        
+    </select>
+    <br><br>
+    <select name="genero" id="genero">
+        <% for(  i = 0; i < generos.length; i++ ) { %>
+            <option value="<%=generos[i].Id%>"><%=generos[i].Nombre%></option>            
+        <% } %>  
+    </select>
+    <br><br>
+    <select name="editorial" id="editorial">
+        <% for(  i = 0; i < editoriales.length; i++ ) { %>
+            <option value="<%=editoriales[i].Id%>"><%=editoriales[i].Nombre%></option>            
+        <% } %>  
+    </select>
+    <br><br>
+    <select name="idioma" id="idioma">
+        <% for(  i = 0; i < idiomas.length; i++ ) { %>
+            <option value="<%=idiomas[i].Id%>"><%=idiomas[i].Nombre%></option>            
+        <% } %>  
+    </select>
+    <br><br>
+    Nombre:<input type="text" name="nombre" id="nombre"><br><br>
+    Año Edición: <input type="text" name="edicion" id="edicion"><br><br>
+    Páginas: <input type="text" name="paginas" id="paginas"><br><br>
+    Imagen: <input type="file" name="imagen" id="imagen"><br><br>
+    Resumen: <br>
+    <textarea name="resumen" id="resumen" cols="50" rows="10"></textarea>
+    <input type="submit" value="Enviar">
+</form>
