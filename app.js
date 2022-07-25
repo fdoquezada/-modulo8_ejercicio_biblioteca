@@ -23,8 +23,7 @@ app.get('/galeria', async (req, res) => {
   let consulta= 'select l."Id", l."Nombre" AS "Libro",a."Nombre" as "Autor",l."Edicion" from "Libros" l'
   consulta += ' JOIN "Autores" a ON l."IdAutor"=a."Id" '
   let resultado;
-  console.log(consulta);
-  try{
+   try{
     resultado = await conexion.query(consulta);
   }catch(err){
     console.log("Error em consulta:" + err.message);
