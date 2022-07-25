@@ -3,6 +3,6 @@ const chalk=require("chalk");
 
 
 
-app.listen(3000,function(){
-    console.log(chalk.blue.inverse("servidor iniciado en puerto 3000"));
+app.listen(process.env.PORT || 3000,function(){
+    console.log(chalk.blue.inverse("servidor iniciado en puerto", process.env.PORT || 3000));
 });
