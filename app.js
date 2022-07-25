@@ -3,7 +3,9 @@ const express=require('express');
 const {conexion}=require("./bd");
 const fs=require("fs");
 const upload=require("express-fileupload");
-const path=require("path")
+const path=require("path");
+const bodyparser=require("body-parser");
+const nodemailer=require("nodemailer");
 const morgan= require("morgan")
 
 

@@ -1,5 +1,5 @@
-<% - include ("./partials/cabecera")%>
-<% - include ("./partials/navbar")%>
+<%- include ("./partials/cabecera")%>
+<%- include ("./partials/navbar")%>
 <br><br> 
  
 
@@ -35,5 +35,9 @@
     Imagen: <input type="file" name="imagen" id="imagen"><br><br>
     Resumen: <br>
     <textarea name="resumen" id="resumen" cols="50" rows="10"></textarea>
+    <br>
     <input type="submit" value="Enviar">
 </form>
+
+<%- include ("./partials/footer")%>
+<% include ("./partials/pie.ejs") %>
